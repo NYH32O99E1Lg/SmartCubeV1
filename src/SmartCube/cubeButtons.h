@@ -1,8 +1,8 @@
 extern Adafruit_SSD1306 display;    // Reference to the OLED display object
 bool is_display_off = false;        // State variable to track display on/off status
 
-int buttonDebounceDelay = 50;       // Debounce delay in milliseconds
-int buttonLongPressDelay = 2000;    // Long press threshold in milliseconds
+unsigned long buttonDebounceDelay = 50;       // Debounce delay in milliseconds
+unsigned long buttonLongPressDelay = 2000;    // Long press threshold in milliseconds
 
 void cubeButtonHandler() {
     unsigned long currentMillis = millis(); // Get the current time in milliseconds

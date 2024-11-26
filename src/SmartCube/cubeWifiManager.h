@@ -12,23 +12,27 @@ static const String configFile = "/cubeWifiManager";
 
 // Timeout for WiFi connection attempts
 static const unsigned long connectionTimeout = 15000; // 15 seconds
-
-struct cubeWifiManager {
+class cubeWifiManager {
 public:
+    // Constructors
     cubeWifiManager(Adafruit_SSD1306& display);
     cubeWifiManager(String ssid, String pass, bool hidden, Adafruit_SSD1306& display);
+
+    // Public methods
     bool start();
     void reset();
     void addSsid(String ssid, String password);
     void removeSsid(String ssid, String password);
     
 private:
+    // Private members
     Adafruit_SSD1306& display;
     std::unique_ptr<ESP8266WebServer> server;
     std::map<String, String> _ssids;
     String _ssid, _pass;
     bool _hidden;
     
+    // Private methods
     void init(String ssid, String pass, bool hidden);
     bool tryConnectToSsid(const char* ssid, const char* pass);
     bool tryConnect();
