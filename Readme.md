@@ -1,6 +1,7 @@
 # SmartCube
 
-**SmartCube** is a compact and customizable project using the ESP8266 D1 Mini. It features a rechargeable power supply, three input buttons, an SSD1306 OLED display for user interface, and a piezo buzzer for sound.  
+**SmartCube** is a compact and customizable desk toy using the ESP8266 D1 Mini. 
+It features a rechargeable power supply, three input buttons, an SSD1306 OLED display for user interface, and a piezo buzzer for sound.  
 
 ---
 
@@ -26,7 +27,7 @@
 | Piezo Buzzer              | 1            | Active buzzer                             | Provides audio feedback                     |  
 | Resistors (10kΩ)          | 3            | Pull-down resistors for buttons           | Ensures stable button input                 |  
 | Wires / Dupont Connectors | Several      | For connections                           | Ensure reliable wiring                      |  
-| Enclosure (Optional)      | 1            | 3D-printed or custom-made case            | For housing the components                  |  
+| Enclosure                 | 1            | 3D-printed or custom-made case            | For housing the components                  |  
 
 ---
 
@@ -39,7 +40,7 @@
 #define OLED_RESET -1  
 #define FRAMERATE 8  
 ```  
-Connect the OLED display via I2C to the D1 Mini:  
+The OLED display is connected via I2C to the D1 Mini:  
 - **SDA**: D2 (GPIO4)  
 - **SCL**: D1 (GPIO5)  
 
@@ -59,20 +60,40 @@ Connect the OLED display via I2C to the D1 Mini:
 
 ## Assembly Instructions  
 
-1. **Power Supply Setup**: Connect the 14250 battery to the TP4056 module for safe charging and protection. Wire the output of the TP4056 to power the D1 Mini.  
-2. **OLED Display**: Solder connections for SDA and SCL to the respective pins on the D1 Mini.  
+1. **Power Supply Setup**:  
+   - Connect the 14250 battery to the TP4056 module for safe charging and protection.  
+   - Wire the output of the TP4056 to the **3.3V pin** on the D1 Mini to power the device.  
+   - Connect the **5V output pin** from the D1 Mini to the **input port** on the TP4056 module to enable charging functionality.  
+
+2. **OLED Display**: Solder connections for SDA (D2, GPIO4) and SCL (D1, GPIO5) to the respective pins on the D1 Mini.  
 3. **Buttons**: Attach each button to the specified GPIO pins with pull-down resistors to ensure reliable input.  
 4. **Buzzer**: Connect the piezo buzzer to GPIO0. Ensure proper polarity.  
 5. **Enclosure (Optional)**: Assemble all components in a secure housing.  
 
 ---
 
-## Usage  
+## Demo Code Explanation  
 
-- Power the device using the rechargeable battery.  
-- Use the buttons for input.  
-- Visual feedback is displayed on the OLED screen.  
-- Audio feedback is provided through the piezo buzzer.  
+The provided demo code demonstrates the main features of the SmartCube, focusing on system initialization, button handling, OLED display output, and WiFi management. Below is a breakdown of its components:
+
+### Key Features  
+
+1. **WiFi Management**:  
+   - The `cubeWifiManager` class manages WiFi connectivity seamlessly.  
+   - If no known WiFi network is available, it starts a configuration portal and creates an access point (AP), allowing users to connect the SmartCube to a network from another WiFi-enabled device.  
+   - The OLED display shows the access point details, such as the AP name and IP address, making the setup process user-friendly and accessible.
+
+2. **Button Handling**:  
+   - Buttons are mapped to specific GPIO pins: `PIN_BTN_L` (Left), `PIN_BTN_M` (Middle), and `PIN_BTN_R` (Right).  
+   - The `cubeButtonHandler()` function, executed in the `loop()`, monitors and interprets button presses, differentiating between short and long presses.  
+
+#### Default Button Actions  
+- **Right Button**:  
+  - *Short Press*: Turns the OLED display **on** (if previously off).  
+  - *Long Press*: Turns the OLED display **off**, helping conserve power.  
+
+- **Left + Middle Buttons (Simultaneous Long Press)**:  
+  - Triggers an ESP8266 reboot, effectively restarting the device.  
 
 ---
 
@@ -84,3 +105,5 @@ Connect the OLED display via I2C to the D1 Mini:
 - Handle the battery with care to prevent damage.  
 
 For questions or additional details, feel free to reach out!
+
+---
