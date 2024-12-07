@@ -1,7 +1,12 @@
+Here's the updated README with the image added in the appropriate section:
+
+---
+
 # SmartCube
 
-**SmartCube** is a compact and customizable desk toy using the ESP8266 D1 Mini. 
-It features a rechargeable power supply, three input buttons, an SSD1306 OLED display for user interface, and a piezo buzzer for sound.  
+**SmartCube** is a compact and customizable project using the ESP8266 D1 Mini. It features a rechargeable power supply, three input buttons, an SSD1306 OLED display for user interface, and a piezo buzzer for sound.  
+
+![SmartCube](hardware/pictures/cubez.jpeg)
 
 ---
 
