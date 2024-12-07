@@ -70,7 +70,7 @@ The OLED display is connected via I2C to the D1 Mini:
 2. **OLED Display**: Solder connections for SDA (D2, GPIO4) and SCL (D1, GPIO5) to the respective pins on the D1 Mini.  
 3. **Buttons**: Attach each button to the specified GPIO pins with pull-down resistors to ensure reliable input.  
 4. **Buzzer**: Connect the piezo buzzer to GPIO0. Ensure proper polarity. Negative to the GPI00, Positive to 3.3v
-5. **Enclosure (Optional)**: Assemble all components in a secure housing.  
+5. **Enclosure**: Assemble all components in a secure housing. May require some hot glue to keep components in
 
 ---
 
