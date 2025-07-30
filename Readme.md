@@ -36,7 +36,7 @@
 
 ## Demo Code Explanation  
 
-The provided demo code is the starting point for the SmartCube development with Platform.io, it does comes with the basic system initialization, button handling, OLED display output configured, and WiFi management:
+The provided demo code is the starting point(hello world) for the SmartCube development with Platform.io, it does the basic system initialization, button handling, OLED display output configured, and WiFi management:
 
 ### Key Features  
 
