@@ -9,9 +9,11 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 ---
 
 ## Info    
-- **Code**: I have a few projects developed for the cube. You can see the list [here on my Gitea](https://git.kopic.hr/tomislav?tab=repositories&q=cube&sort=recentupdate) 
+- **Code**: I have a few projects developed for the Cube. You can see the list [here on my Gitea](https://git.kopic.hr/tomislav?tab=repositories&q=cube&sort=recentupdate) 
+- **V2**: There is also a more [powerful version](https://git.kopic.hr/tomislav/SmartCubeV2), it's pretty much the same but with extra features and is using ESP32, I only made one of them and I don't like it yet, it needs work. 
 - **Case**: 3D-printable design included in `/hardware` directory  
 - **Schematics**: and assembly instructions are also in the `/hardware` directory
+- **This is a hobby project I work on and develop for when I have literally nothing else to do, do not expect regular updates. You are free to clone this and do whatever you like with it**
 
 ---
 
@@ -34,7 +36,7 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 
 ## Demo Code Explanation  
 
-The provided demo code is the starting point(hello world) for the SmartCube development with Platform.io, it does the basic system initialization, button handling, OLED display output configured, and WiFi management:
+The provided demo code is the starting point(hello world) for the SmartCube development with Platform.io, it does the basic system initialization, button handling, OLED display output configured and WiFi management:
 
 ### Key Features  
 
