@@ -1,6 +1,6 @@
 # SmartCube
 
-**SmartCube** is a compact and customizable desk toy using the ESP8266 D1 Mini. It features a rechargeable power supply, three input buttons, an SSD1306 OLED display for user interface, and a piezo buzzer for sound.  
+**SmartCube** is a compact and customizable desk toy using the ESP8266 D1 Mini. It features a rechargeable power supply, three input buttons, an SSD1306 OLED display and a 20mm piezo buzzer for sound.  
 
 ![SmartCube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/cubez.jpg)
 
@@ -34,6 +34,30 @@
 
 ---
 
+## Demo Code Explanation  
+
+The provided demo code demonstrates the main features of the SmartCube, focusing on system initialization, button handling, OLED display output, and WiFi management. Below is a breakdown of its components:
+
+### Key Features  
+
+1. **WiFi Management**:  
+   - The `cubeWifiManager` class manages WiFi connectivity seamlessly.  
+   - If no known WiFi network is available, it starts a configuration portal and creates an access point (AP), allowing users to connect the SmartCube to a network from another WiFi-enabled device.  
+   - The OLED display shows the access point details, such as the AP name and IP address, making the setup process very easy.
+
+2. **Button Handling**:  
+   - Buttons are mapped to specific GPIO pins: `PIN_BTN_L` (Left), `PIN_BTN_M` (Middle), and `PIN_BTN_R` (Right).  
+   - The `cubeButtonHandler()` function, executed in the `loop()`, monitors and interprets button presses, differentiating between short and long presses.  
+
+#### Default Button Actions  
+- **Right Button**:  
+  - *Short Press*: Turns the OLED display **on** (if previously off).  
+  - *Long Press*: Turns the OLED display **off**, helping conserve power.  
+
+- **Left + Middle Buttons (Simultaneous Long Press)**:  
+  - Triggers an ESP8266 reboot, effectively restarting the device.  
+
+---
 ## Pin Connections  
 
 ### OLED Display Settings  
@@ -58,31 +82,6 @@ The OLED display is connected via I2C to the D1 Mini:
 - Button Middle (PIN_BTN_M): GPIO13  
 - Button Right (PIN_BTN_R): GPIO15  
 - Piezo Buzzer (PIN_BUZZER): GPIO0  
-
----
-
-## Demo Code Explanation  
-
-The provided demo code demonstrates the main features of the SmartCube, focusing on system initialization, button handling, OLED display output, and WiFi management. Below is a breakdown of its components:
-
-### Key Features  
-
-1. **WiFi Management**:  
-   - The `cubeWifiManager` class manages WiFi connectivity seamlessly.  
-   - If no known WiFi network is available, it starts a configuration portal and creates an access point (AP), allowing users to connect the SmartCube to a network from another WiFi-enabled device.  
-   - The OLED display shows the access point details, such as the AP name and IP address, making the setup process user-friendly and accessible.
-
-2. **Button Handling**:  
-   - Buttons are mapped to specific GPIO pins: `PIN_BTN_L` (Left), `PIN_BTN_M` (Middle), and `PIN_BTN_R` (Right).  
-   - The `cubeButtonHandler()` function, executed in the `loop()`, monitors and interprets button presses, differentiating between short and long presses.  
-
-#### Default Button Actions  
-- **Right Button**:  
-  - *Short Press*: Turns the OLED display **on** (if previously off).  
-  - *Long Press*: Turns the OLED display **off**, helping conserve power.  
-
-- **Left + Middle Buttons (Simultaneous Long Press)**:  
-  - Triggers an ESP8266 reboot, effectively restarting the device.  
 
 ---
 
