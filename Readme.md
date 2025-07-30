@@ -23,12 +23,12 @@
 | ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |  
 | SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |  
 | 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type, most 14250 are not |  
-| TP4056 Module             | 1            | Charging and protection circuit           |                                             |  
+| TP4056 Module             | 1            | Charging and protection circuit           | Does not need to have a USB connector       |  
 | Push Buttons              | 3            | Tactile push buttons                      |                                             |  
 | Piezo Buzzer              | 1            | Buzzer for audio feedback                 |                                             |  
 | Resistors (10kΩ)          | 3            | Pull-down resistors for buttons           | Ensures stable button input                 |  
 | Wires                     | Several      | For connections                           |                                             |  
-| Enclosure                 | 1            | 3D-printed or custom-made case            | STL files are in the `/hardware`            |  
+| Enclosure                 | 1            | 3D-printed or custom-made case            | 3D printable STL files are in `hardware/case/`      |  
 | 2x6mm screw               | 12           | Small screws for seembling the case       | Does not have to be exactly 6mm long        |  
 
 ---
