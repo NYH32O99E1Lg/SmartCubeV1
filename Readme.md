@@ -36,7 +36,7 @@
 
 ## Demo Code Explanation  
 
-The provided demo code demonstrates the main features of the SmartCube, focusing on system initialization, button handling, OLED display output, and WiFi management. Below is a breakdown of its components:
+The provided demo code is the starting point for the SmartCube development with Platform.io, it does comes with the basic system initialization, button handling, OLED display output configured, and WiFi management:
 
 ### Key Features  
 
