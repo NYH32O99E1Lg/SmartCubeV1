@@ -61,20 +61,6 @@ The OLED display is connected via I2C to the D1 Mini:
 
 ---
 
-## Assembly Instructions  
-
-1. **Power Supply Setup**:  
-   - Connect the 14250 battery to the TP4056 module for safe charging and protection.  
-   - Wire the output of the TP4056 to the **3.3V pin** on the D1 Mini to power the device.  
-   - Connect the **5V output pin** from the D1 Mini to the **input port** on the TP4056 module to enable charging functionality.  
-
-2. **OLED Display**: Solder connections for SDA (D2, GPIO4) and SCL (D1, GPIO5) to the respective pins on the D1 Mini.  
-3. **Buttons**: Attach each button to the specified GPIO pins with pull-down resistors to ensure reliable input.  
-4. **Buzzer**: Connect the piezo buzzer to GPIO0. Ensure proper polarity. Negative to the GPI00, Positive to 3.3v
-5. **Enclosure**: Assemble all components in a secure housing. May require some hot glue to keep components in
-
----
-
 ## Demo Code Explanation  
 
 The provided demo code demonstrates the main features of the SmartCube, focusing on system initialization, button handling, OLED display output, and WiFi management. Below is a breakdown of its components:
@@ -100,16 +86,32 @@ The provided demo code demonstrates the main features of the SmartCube, focusing
 
 ---
 
+## Assembly Instructions  
+
+1. **Power Supply Setup**:  
+   - Connect the 14250 battery to the TP4056 module for safe charging and protection.  
+   - Wire the output of the TP4056 to the **3.3V pin** on the D1 Mini to power the device.  
+   - Connect the **5V output pin** from the D1 Mini to the **input port** on the TP4056 module to enable charging functionality.  
+![Battery](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171550.jpg)
+
+
+2. **OLED Display**: Solder connections for SDA (D2, GPIO4) and SCL (D1, GPIO5) to the respective pins on the D1 Mini.  
+3. **Buttons**: Attach each button to the specified GPIO pins with pull-down resistors to ensure reliable input.  
+4. **Buzzer**: Connect the piezo buzzer to GPIO0. Ensure proper polarity. Negative to the GPI00, Positive to 3.3v
+5. **Enclosure**: Assemble all components in a secure housing. May require some hot glue to keep components in
+
+---
+
 ## Notes  
 
 - This is still a work in progress
-- Everything is pretty tightly packed in there. But it's not as hard to make as it looks.
+- Everything is pretty tightly packed in there and it's a mess. But it's not as hard to make as it looks.
 ![Packed](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241213_171725.jpg)
 
-- Ensure all connections are secure to avoid malfunction. Hot glue is your friend.
+- Ensure all connections are secure. Hot glue is your friend.
 - Test the circuit thoroughly before placing and glueing it in the enclosure.  
-- Battery is the trickiest part to fit in, it's best to glue the charing module directly to it and put it in the case last:
-![Battery](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171550.jpg)
+- Battery is the trickiest part to fit in, it's best to glue the charging module directly to it and put it in the case last
+
 
 For questions or additional details, feel free to reach out!
 
