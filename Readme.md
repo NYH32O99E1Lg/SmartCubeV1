@@ -102,9 +102,13 @@ The provided demo code demonstrates the main features of the SmartCube, focusing
 ## Notes  
 
 - This is still a work in progress
-- Ensure all connections are secure to avoid malfunction.  
-- Test the circuit thoroughly before placing it in the enclosure.  
-- Handle the battery with care to prevent damage.  
+- Everything is pretty tightly packed in there. But it's not as hard to make as it looks.
+![Packed](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241213_171725.jpg)
+
+- Ensure all connections are secure to avoid malfunction. Hot glue is your friend.
+- Test the circuit thoroughly before placing and glueing it in the enclosure.  
+- Battery is the trickiest part to fit in, it's best to glue the charing module directly to it and put it in the case last:
+![Battery](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171550.jpg)
 
 For questions or additional details, feel free to reach out!
 
