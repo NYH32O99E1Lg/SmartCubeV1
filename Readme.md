@@ -6,13 +6,14 @@
 
 ---
 
-## Features  
-- **Microcontroller**: ESP8266 D1 Mini (WeMos)  
+## Info  
+- **Microcontroller**: ESP8266 D1 Mini (WeMos or clone)  
 - **Display**: SSD1306 OLED (128x64 resolution)  
-- **Input**: Three push buttons  
+- **Input**: Three or four push buttons
 - **Sound**: Piezo buzzer for audio feedback  
 - **Power**: 14250 rechargeable battery with TP4056 charging module  
 - **Case**: 3D-printable design included in `/hardware` directory  
+- **Schematics**: and assembly instructions are also in the `/hardware` directory  
 
 ---
 
