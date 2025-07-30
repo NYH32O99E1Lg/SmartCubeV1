@@ -20,15 +20,15 @@
 
 | **Component**             | **Quantity** | **Description**                           | **Notes**                                   |  
 |---------------------------|--------------|-------------------------------------------|---------------------------------------------|  
-| ESP8266 D1 Mini           | 1            | Microcontroller module                    | Base of the SmartCube                       |  
-| SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          | Ensure proper wiring for SDA/SCL            |  
-| 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | For powering the cube                       |  
-| TP4056 Module             | 1            | Charging and protection circuit           | For battery management                      |  
-| Push Buttons              | 3            | Tactile push buttons                      | Used for user input                         |  
-| Piezo Buzzer              | 1            | Active buzzer                             | Provides audio feedback                     |  
+| ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |  
+| SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |  
+| 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type     |  
+| TP4056 Module             | 1            | Charging and protection circuit           |                                             |  
+| Push Buttons              | 3            | Tactile push buttons                      |                                             |  
+| Piezo Buzzer              | 1            | Buzzer for audio feedback                 |                                             |  
 | Resistors (10kΩ)          | 3            | Pull-down resistors for buttons           | Ensures stable button input                 |  
-| Wires / Dupont Connectors | Several      | For connections                           | Ensure reliable wiring                      |  
-| Enclosure                 | 1            | 3D-printed or custom-made case            | For housing the components                  |  
+| Wires                     | Several      | For connections                           |                                             |  
+| Enclosure                 | 1            | 3D-printed or custom-made case            | STL files are in the `/hardware`            |  
 | 2x6mm screw               | 12           | Small screws for seembling the case       | Does not have to be exactly 6mm long        |  
 
 ---
