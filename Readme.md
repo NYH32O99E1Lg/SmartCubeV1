@@ -22,7 +22,7 @@
 |---------------------------|--------------|-------------------------------------------|---------------------------------------------|  
 | ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |  
 | SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |  
-| 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type     |  
+| 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type, most 14250 are not |  
 | TP4056 Module             | 1            | Charging and protection circuit           |                                             |  
 | Push Buttons              | 3            | Tactile push buttons                      |                                             |  
 | Piezo Buzzer              | 1            | Buzzer for audio feedback                 |                                             |  
