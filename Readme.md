@@ -89,15 +89,15 @@ The provided demo code demonstrates the main features of the SmartCube, focusing
 ## Assembly Instructions  
 
 1. **Power Supply Setup**:  
-   - Connect the 14250 battery to the TP4056 module for safe charging and protection.  
+   - Solder the 14250 battery to the TP4056 module input pins.  
    - Wire the output of the TP4056 to the **3.3V pin** on the D1 Mini to power the device.  
-   - Connect the **5V output pin** from the D1 Mini to the **input port** on the TP4056 module to enable charging functionality.  
+   - Connect the **5V output pin** from the D1 Mini to the **input port** on the TP4056 module to allow charging trough the Data USB port on the ESP8266.  
 ![Battery](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171550.jpg)
 
 
 2. **OLED Display**: Solder connections for SDA (D2, GPIO4) and SCL (D1, GPIO5) to the respective pins on the D1 Mini.  
 3. **Buttons**: Attach each button to the specified GPIO pins with pull-down resistors to ensure reliable input.  
-4. **Buzzer**: Connect the piezo buzzer to GPIO0. Ensure proper polarity. Negative to the GPI00, Positive to 3.3v
+4. **Buzzer**: Connect the piezo buzzer, negative to the GPI00, positive to 3.3v
 5. **Enclosure**: Assemble all components in a secure housing. May require some hot glue to keep components in
 
 ---
