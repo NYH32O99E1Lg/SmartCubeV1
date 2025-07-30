@@ -1,7 +1,8 @@
 # SmartCube
 
-**SmartCube** is a tinly and customizable desk toy using the ESP8266 D1 Mini. 
-It features a rechargeable power supply, three input buttons, an SSD1306 OLED display and a 20mm piezo buzzer for sound.  
+**SmartCube** is a tiny and customizable desk toy using the ESP8266 D1 Mini.
+Built entirely from cheap, easy-to-find parts, it can connect to Wi-Fi and can be programmed to do just about anything:
+show notifications, display the weather, monitor stuff, show a clock, serve a web site, be a virtual pet or whatever else your caffeine-fueled brain can imagine.
 
 ![SmartCube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/cubez.jpg)
 
@@ -23,7 +24,7 @@ It features a rechargeable power supply, three input buttons, an SSD1306 OLED di
 | 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type, most 14250 are not |  
 | TP4056 Module             | 1            | Charging and protection circuit           | Does not need to have a USB connector       |  
 | Push Buttons              | 3            | Tactile push buttons                      |                                             |  
-| Piezo Buzzer              | 1            | Buzzer for audio feedback                 |                                             |  
+| Piezo Buzzer              | 1            | 20mm buzzer for audio feedback            |                                             |  
 | Resistors (10kΩ)          | 3            | Pull-down resistors for buttons           | Ensures stable button input                 |  
 | Wires                     | Several      | For connections                           |                                             |  
 | Enclosure                 | 1            | 3D-printed or custom-made case            | 3D printable STL files are in `hardware/case/`      |  
