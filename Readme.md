@@ -36,7 +36,7 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 
 ## Demo Code Explanation  
 
-The provided demo code is the starting point(hello world) for the SmartCube development with Platform.io, it does the basic system initialization, button handling, OLED display output configured and WiFi management:
+The demo code provided in this repo is the starting point(hello world) for the SmartCube development with Platform.io, it does the basic system initialization, button handling, OLED display output configured and WiFi management:
 
 ### Key Features  
 
@@ -60,28 +60,16 @@ The provided demo code is the starting point(hello world) for the SmartCube deve
 ---
 ## Pin Connections  
 
-### OLED Display Settings  
-```c  
-#define SCREEN_WIDTH 128  
-#define SCREEN_HEIGHT 64  
-#define OLED_RESET -1  
-#define FRAMERATE 8  
-```  
-The OLED display is connected via I2C to the D1 Mini:  
-- **SDA**: D2 (GPIO4)  
-- **SCL**: D1 (GPIO5)  
-
-### Buttons and Buzzer  
-```c  
-#define PIN_BTN_L 12 // D6  
-#define PIN_BTN_M 13 // D7  
-#define PIN_BTN_R 15 // D8  
-#define PIN_BUZZER 0 // D3  
-```  
+Pin numbers for buttons and other stuff is defined in the [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/src/example_config.h) and the schematic for the [D1 Mini is here](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/esp8266.png):  
+You don't have to follow my pin definition exactly but i find this the easiest way to assemble and fit everything in.
 - Button Left (PIN_BTN_L): GPIO12  
 - Button Middle (PIN_BTN_M): GPIO13  
 - Button Right (PIN_BTN_R): GPIO15  
 - Piezo Buzzer (PIN_BUZZER): GPIO0  
+
+The OLED display must to be connected via I2C on pins:
+- **SDA**: D2 (GPIO4)  
+- **SCL**: D1 (GPIO5)  
 
 ---
 
