@@ -110,8 +110,6 @@ The OLED display must to be connected via I2C on pins:
 4. **Buzzer**: Connect the piezo buzzer, negative to the GPI00, positive to 3.3v
 5. **Enclosure**: Assemble all components in a secure housing.
 
-![Done](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/hardware/pictures/IMG_20240618_203812.jpg)
-
 ---
 
 ## Notes  
@@ -126,3 +124,6 @@ The OLED display must to be connected via I2C on pins:
 
 
 For questions or additional details, feel free to reach out! I would love to hear some feedback.
+Good luck and have fun :)
+
+![Done](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20240618_203812.jpg)
