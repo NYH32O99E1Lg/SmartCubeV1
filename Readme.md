@@ -117,6 +117,7 @@ The OLED display must to be connected via I2C on pins:
 - **VCC**: 3.3V pin or directly to the TP4056 output
 
 6. **Power Supply Setup**:  
+   - Battery is not required and you can skip this step if you want to but it is much cuter when it's portable. A single 600mAh 14250 lasts about 24 hours.
    - Solder the 14250 battery to the TP4056 module input pins.  
    - Wire the output of the TP4056 to the **3.3V pin** on the D1 Mini to power the device.  
    - Connect the **5V output pin** from the D1 Mini to the **input port** on the TP4056 module to allow charging trough the Data USB port on the ESP8266.  
