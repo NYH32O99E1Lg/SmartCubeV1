@@ -105,11 +105,12 @@ The OLED display must to be connected via I2C on pins:
    - Connect the **5V output pin** from the D1 Mini to the **input port** on the TP4056 module to allow charging trough the Data USB port on the ESP8266.  
 ![Battery](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171550.jpg)
 
-
-2. **OLED Display**: Solder connections for SDA (D2, GPIO4) and SCL (D1, GPIO5) to the respective pins on the D1 Mini.  
+2. **OLED Display**: Solder connections for SDA (D2, GPIO4) and SCL (D1, GPIO5) to the respective pins on the D1 Mini, along with the VCC and GND  
 3. **Buttons**: Attach each button to the specified GPIO pins with pull-down resistors to ensure reliable input.  
 4. **Buzzer**: Connect the piezo buzzer, negative to the GPI00, positive to 3.3v
-5. **Enclosure**: Assemble all components in a secure housing. May require some hot glue to keep components in
+5. **Enclosure**: Assemble all components in a secure housing.
+
+![Done](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/hardware/pictures/IMG_20240618_203812.jpg)
 
 ---
 
