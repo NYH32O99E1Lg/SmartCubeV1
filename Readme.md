@@ -103,7 +103,8 @@ Body with 3 or 4 button slots is available in the `hardware/case/`
 ## Pin Connections  
 
 Pin numbers for buttons and other stuff is defined in the [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/src/example_config.h) and the schematic for the [D1 Mini is here](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/esp8266.png):  
-You don't have to follow my pin definition exactly but i find this the easiest way to assemble and fit everything in.
+You don't have to follow my pin definition exactly but I find this the easiest way to assemble and fit everything in. 3 Button variant is the standard. If you are gonna go with the 4 button variant you will need to define this yourself. 
+
 - Button Left (PIN_BTN_L): GPIO12  
 - Button Middle (PIN_BTN_M): GPIO13  
 - Button Right (PIN_BTN_R): GPIO15
