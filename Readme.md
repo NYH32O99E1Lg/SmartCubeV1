@@ -21,15 +21,15 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 
 | **Component**             | **Quantity** | **Description**                           | **Notes**                                   |  
 |---------------------------|--------------|-------------------------------------------|---------------------------------------------|  
-| ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |  
+| ESP8266 D1 Mini or ESP32 S2 Mini          | 1            | Microcontroller module                    |                                             |  
 | SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |  
 | 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type, most 14250 are not |  
 | TP4056 Module             | 1            | Charging and protection circuit           | Does not need to have a USB connector       |  
-| Push Buttons              | 3 or 4       | Tactile push buttons                      |                                             |  
-| Piezo Buzzer              | 1            | 20mm buzzer for audio feedback            |                                             |  
+| 6x6 Push Buttons          | 3 or 4       | Tactile push buttons                      |                                             |  
+| 20mm Piezo Buzzer         | 1            | Caseless buzzer for audio                 |                                             |  
 | Resistors (10kΩ)          | 3 or 4       | Pull-down resistors for buttons           | Not reqired if you are using ESP32          |  
-| Wires                     | Several      | For connections                           |                                             |  
-| Enclosure                 | 1            | 3D-printed or custom-made case            | 3D printable STL files are in `hardware/case/` |  
+| Wires                     | Several      | Thin wires for connections                |                                             |  
+| Enclosure                 | 1            | 3D-printed case                           | 3D printable STL files are in `hardware/case/` |  
 | 2x6mm screw               | 12           | Small screws for seembling the case       | Does not have to be exactly 6mm long        |  
 
 ---
