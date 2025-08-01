@@ -21,7 +21,7 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 
 | **Component**             | **Quantity** | **Description**                           | **Notes**                                   |  
 |---------------------------|--------------|-------------------------------------------|---------------------------------------------|  
-| ESP8266 D1 Mini or ESP32 S2 Mini          | 1            | Microcontroller module                    |                                             |  
+| ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |  
 | SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |  
 | 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type, most 14250 are not |  
 | TP4056 Module             | 1            | Charging and protection circuit           | Does not need to have a USB connector       |  
@@ -84,14 +84,14 @@ This is meant to provide a minimal starting point for further development with t
 
 ## Assembly Instructions  
 
-1. Push the ESP8266 or ESP32 microcontroller in the ledge on the bottom [the cube body](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Body_3_button.stl) with the USB-C port facing the hole. 
+1. Push the ESP8266 microcontroller in the ledge on the bottom [the cube body](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Body_3_button.stl) it sould 'click in' with the USB-C port facing the hole. 
 Body with 3 or 4 button slots is available in the `hardware/case/`
 
 2. **Buttons**: You can also glue in the buttons to the top slots at this step
 
 ![Step1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171635.jpg)
 
-3. **OLED Display**: Crew in or glue the SSD1306 to the [front part of the cube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Front.stl) solder the wires to the OLED
+3. **OLED Display**: Crew in or glue the SSD1306 to the [front part of the cube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Front.stl) solder the 4 wires to the OLED display, make sure you have some extra lenght, 4-5cm sould be more than enough
 
 ![Step2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171655.jpg)
 
