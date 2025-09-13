@@ -89,13 +89,13 @@ This is meant to provide a minimal starting point for further development with t
 1. Push the ESP8266 microcontroller in the ledge on the bottom [the cube body](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Body_3_button.stl) it sould 'click in' with the USB-C port facing the hole. 
 Body with 3 or 4 button slots is available in the `hardware/case/`
 
+![Step3](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build3.jpg)
+
 ![Step1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build1.jpg)
 
 ![Step2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build2.jpg)
 
 2. **Buttons**: You can glue in the buttons to the top slots at this step and solder the resistors to them
-
-![Step3](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build3.jpg)
 
 ![Step4](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build4.jpg)
 
@@ -103,11 +103,12 @@ Solder all of the buttons to the microcontroller:
 Pin numbers for buttons and other stuff is defined in the [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/src/example_config.h) and the schematic for the [D1 Mini is here](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/esp8266.png):  
 You don't have to follow my pin definition exactly but I find this the easiest way to assemble and fit everything in. 3 Button variant is the standard. If you are gonna go with the 4 button variant you will need to define this yourself. 
 
-![Step5](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build5.jpg)
-
 - Button Left (PIN_BTN_L): (D6) GPIO12  
 - Button Middle (PIN_BTN_M): (D7) GPIO13  
 - Button Right (PIN_BTN_R): (D8) GPIO15
+
+![Step5](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build5.jpg)
+
 
 3. **OLED Display**: Crew in or glue the SSD1306 to the [front part of the cube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Front.stl) solder the 4 wires to the OLED display, make sure you have some extra lenght, 4-5cm sould be more than enough
 
