@@ -84,31 +84,37 @@ This is meant to provide a minimal starting point for further development with t
 
 ## Assembly Instructions  
 
+![layout](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/layout.jpg)
+
 1. Push the ESP8266 microcontroller in the ledge on the bottom [the cube body](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Body_3_button.stl) it sould 'click in' with the USB-C port facing the hole. 
 Body with 3 or 4 button slots is available in the `hardware/case/`
 
-2. **Buttons**: You can also glue in the buttons to the top slots at this step
+![Step1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build1.jpg)
 
-![Step1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171635.jpg)
+![Step2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build2.jpg)
 
-3. **OLED Display**: Crew in or glue the SSD1306 to the [front part of the cube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Front.stl) solder the 4 wires to the OLED display, make sure you have some extra lenght, 4-5cm sould be more than enough
+2. **Buttons**: You can glue in the buttons to the top slots at this step and solder the resistors to them
 
-![Step2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171655.jpg)
+![Step3](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build3.jpg)
 
-4. **Buzzer**: Glue in the buzzer to the [back part of the cube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Back_Speaker_Side_Hole.stl)
+![Step4](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build4.jpg)
 
-![Step3](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171645.jpg)
-
-5. Solder all of the components to the microcontroller:
-## Pin Connections  
-
+Solder all of the buttons to the microcontroller:
 Pin numbers for buttons and other stuff is defined in the [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/src/example_config.h) and the schematic for the [D1 Mini is here](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/esp8266.png):  
 You don't have to follow my pin definition exactly but I find this the easiest way to assemble and fit everything in. 3 Button variant is the standard. If you are gonna go with the 4 button variant you will need to define this yourself. 
 
-- Button Left (PIN_BTN_L): GPIO12  
-- Button Middle (PIN_BTN_M): GPIO13  
-- Button Right (PIN_BTN_R): GPIO15
-- Piezo Buzzer (PIN_BUZZER): GPIO0
+![Step5](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build5.jpg)
+
+- Button Left (PIN_BTN_L): (D6) GPIO12  
+- Button Middle (PIN_BTN_M): (D7) GPIO13  
+- Button Right (PIN_BTN_R): (D8) GPIO15
+
+3. **OLED Display**: Crew in or glue the SSD1306 to the [front part of the cube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Front.stl) solder the 4 wires to the OLED display, make sure you have some extra lenght, 4-5cm sould be more than enough
+
+![Step6](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build6.jpg)
+
+![Step7](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build7.jpg)
+
 
 The OLED display must to be connected via I2C on pins:
 - **SDA**: D2 (GPIO4)  
@@ -116,13 +122,23 @@ The OLED display must to be connected via I2C on pins:
 - **GND**: GND
 - **VCC**: 3.3V pin or directly to the TP4056 output
 
-6. **Power Supply Setup**:  
+![Step8](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build8.jpg)
+
+4. **Buzzer**: Glue in the buzzer to the [back part of the cube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Back_Speaker_Side_Hole.stl)
+
+![Step9](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build9.jpg)
+
+5. **Power Supply Setup**:  
    - Battery is not required and you can skip this step if you want to but it is much cuter when it's portable. A single 600mAh 14250 lasts about 24 hours.
    - Solder the 14250 battery to the TP4056 module input pins.  
    - Wire the output of the TP4056 to the **3.3V pin** on the D1 Mini to power the device.  
    - Connect the **5V output pin** from the D1 Mini to the **input port** on the TP4056 module to allow charging trough the Data USB port on the ESP8266.  
 
-![Battery](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241130_171550.jpg)
+![batt1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/batt1.jpg)
+
+![batt2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/batt2.jpg)
+
+![batt3](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/batt3.jpg)
 
 ---
 
@@ -135,7 +151,6 @@ The OLED display must to be connected via I2C on pins:
 - Ensure all connections are secure. Hot glue is your friend.
 - Test the circuit thoroughly before placing and glueing it in the enclosure.  
 - Battery is the trickiest part to fit in, it's best to glue the charging module directly to it and put it in the case last
-
 
 For questions or additional details, feel free to reach out! I would love to hear some feedback.
 Good luck and have fun :)
