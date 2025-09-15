@@ -75,8 +75,9 @@ This is meant to provide a minimal starting point for further development with t
 | TP4056 Module             | 1            | Charging and protection circuit           | Does not need to have a USB connector       |  
 | 6x6 Push Buttons          | 3 or 4       | Tactile push buttons                      |                                             |  
 | 20mm Piezo Buzzer         | 1            | Caseless buzzer for audio                 |                                             |  
-| Resistors (10kΩ)          | 3 or 4       | Pull-down resistors for buttons           |                                             |  
-| Wires                     | Several      | Thin wires for connections                |                                             |  
+| Resistors (10kΩ)          | 3 or 4       | Pull-down resistors for buttons           |                                             |
+| Resistors (220kΩ and 56kΩ)| 1            | Voltage divider                           | For monitoring the battery charge level     |  
+| Wires                     | Several      | Thin wires for connections                | I used wires from inside an old ethernet cable |  
 | Enclosure                 | 1            | 3D-printed case                           | 3D printable STL files are in `hardware/case/` |  
 | 2x6mm screw               | 8            | Small screws for assembling the case      | Does not have to be exactly 6mm long        |  
 | 2x2mm screw               | 4            | Small screws for the front                | Mostly for cosmetic purposes                |  
@@ -151,19 +152,18 @@ As defined in the [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src
 
 **Battery Setup**
 
-The battery is optional. Your SmartCube will work fine without it at this point; however, adding one makes it portable (and much cuter).
+The battery is optional. Your SmartCube will work fine when powered via USB; however, adding one makes it portable (and much cuter).
 
 A single 700 mAh 14250 battery lasts about 24 hours. Keep in mind there's currently no way to manually power the Cube off, it will continue running until the battery is depleted. The TP4056 prevents the cell from being completely drained and should protect it from damage.
 
 * Solder the 14250 battery to the **TP4056 input pins**.
 * Wire the **TP4056 output** to the **3.3V pin** on the D1 Mini to power the device.
 * Connect the **5V output pin** from the D1 Mini to the **TP4056 input port** to allow charging through the USB data port on the ESP8266.
-* *(Optional)* Add a **voltage divider** to monitor battery level with the ESP8266 **A0 pin**.
-
+* *(Optional)* Add a **voltage divider** to monitor battery level on the ESP8266 **A0 pin**:
   * **R1 = 220kΩ** (between battery positive and A0)
   * **R2 = 56kΩ** (between A0 and GND)
 
-  This safely scales 4.2V down to \~0.85V, allowing the software to read and estimate the battery’s charge level.
+    This scales the battery voltage safely down for measurement (~0-0.85V).
 
 ![batt1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/batt1.jpg)
 
