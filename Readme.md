@@ -100,22 +100,23 @@ Body with 3 or 4 button slots is available in the `hardware/case/`
 ![Step2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build2.jpg)
 
 ---
+
 2. **Buttons**
 
-You can glue in the buttons to the top slots at this step and solder the resistors to them.
+At this step, glue the buttons into the top slots and solder resistors to their outputs. You can connect the resistor outputs together, and don't forget to attach an extra wire to the button inputs, this will later be used to connect them to the 3.3V line.
 
 ![Step4](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build4.jpg)
 
-Solder all of the button outputs to the microcontroller:
+Next, solder all of the button outputs to the microcontroller.
 
-Pin numbers for buttons and other stuff is defined in the [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/src/example_config.h) and the schematic for the [D1 Mini is here](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/esp8266.png):  
-You don't have to follow my pin definition exactly but I find this the easiest way to assemble and fit everything in. 3 Button variant is the standard. If you are gonna go with the 4 button variant you will need to define this yourself. 
+Pin numbers for the buttons (and other components) are defined in the [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/src/example_config.h), and the schematic for the [D1 Mini is here](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/esp8266.png).
+You don't have to follow my exact pin definitions, but I've found this setup to be the easiest way to assemble and fit everything in. The 3-button variant is the standard. If you decide to go with 4 buttons, you'll need to define the extra pin yourself in the code.
 
-- Button Left (PIN_BTN_L): (D6) GPIO12  
-- Button Middle (PIN_BTN_M): (D7) GPIO13  
-- Button Right (PIN_BTN_R): (D8) GPIO15
+* Button Left (PIN_BTN_L): (D6) GPIO12
+* Button Middle (PIN_BTN_M): (D7) GPIO13
+* Button Right (PIN_BTN_R): (D8) GPIO15
 
- You also need to solder the GND wire to the end of the resistors and 3.3V on the button inputs.
+Finally, solder the GND wire to the resistor outputs and connect 3.3V to the button inputs.
 
 ![Step5](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/build5.jpg)
 
