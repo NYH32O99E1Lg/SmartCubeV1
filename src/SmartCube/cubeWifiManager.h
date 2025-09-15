@@ -158,7 +158,6 @@ bool cubeWifiManager::tryConnectToSsid(const char* ssid, const char* pass) {
     return false;
 }
 
-// Setup Access Point with DNS and HTTP server
 void cubeWifiManager::createAP() {
     WiFi.softAPdisconnect(true);
     WiFi.mode(WIFI_AP);
@@ -170,9 +169,7 @@ void cubeWifiManager::createAP() {
     display.setCursor(0, 14);
     display.println("SSID:");
     display.setCursor(0, 24);
-    display.setTextSize(1);
     display.println(_ssid.c_str());
-    display.setTextSize(1);
     display.setCursor(0, 40);
     display.println("Config portal:");
     display.setCursor(0, 50);
@@ -191,12 +188,28 @@ void cubeWifiManager::createAP() {
 
     server->begin();
 
+    // 🟢 Modified loop: exit if button is pressed
     while (true) {
         dnsServer.processNextRequest();
         server->handleClient();
         delay(10);
+
+        if (digitalRead(PIN_BTN_M) == HIGH) {  // adjust pin to your button
+            display.clearDisplay();
+            display.setCursor(0, 0);
+            display.println("Exiting AP mode...");
+            display.display();
+            delay(500);
+            break;  // exit AP mode loop
+        }
     }
+
+    // Clean up AP mode and return
+    server->stop();
+    WiFi.softAPdisconnect(true);
+    WiFi.mode(WIFI_STA);  // back to station mode
 }
+
 
 // Redirect to AP IP if not accessed directly
 bool cubeWifiManager::redirectToIp() {
