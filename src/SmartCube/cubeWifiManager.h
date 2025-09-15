@@ -164,18 +164,22 @@ void cubeWifiManager::createAP() {
     WiFi.softAP(_ssid.c_str(), _pass.c_str(), 1, _hidden);
 
     display.clearDisplay();
-    display.setCursor(0, 0);
-    display.println("AccessPoint created");
-    display.setCursor(0, 14);
-    display.println("SSID:");
-    display.setCursor(0, 24);
+    display.setCursor(10, 0);
+    display.println("Access Point Ready");
+    display.drawLine(0, 10, 127, 10, WHITE);
+    display.setCursor(0, 15);
+    display.print("SSID: ");
     display.println(_ssid.c_str());
-    display.setCursor(0, 40);
+    display.setCursor(0, 28);
     display.println("Config portal:");
-    display.setCursor(0, 50);
+    display.setCursor(0, 38);
     display.print("http://");
     display.println(WiFi.softAPIP().toString());
-    display.display(); 
+    display.drawLine(0, 50, 127, 50, WHITE);
+    display.setCursor(3, 54);
+    display.println("Press button to skip");
+
+    display.display();
 
     server.reset(new ESP8266WebServer(80));
     DNSServer dnsServer;
@@ -188,21 +192,24 @@ void cubeWifiManager::createAP() {
 
     server->begin();
 
-    // 🟢 Modified loop: exit if button is pressed
     while (true) {
         dnsServer.processNextRequest();
         server->handleClient();
         delay(10);
 
-        if (digitalRead(PIN_BTN_M) == HIGH) {  // adjust pin to your button
+        if (digitalRead(PIN_BTN_L) == HIGH || digitalRead(PIN_BTN_M) == HIGH || digitalRead(PIN_BTN_R) == HIGH) {
+
+            tone(PIN_BUZZER, 1000, 100);
+
             display.clearDisplay();
             display.setCursor(0, 0);
-            display.println("Exiting AP mode...");
+            display.println("Skipping WiFi setup...");
             display.display();
             delay(500);
             break;  // exit AP mode loop
         }
     }
+
 
     // Clean up AP mode and return
     server->stop();

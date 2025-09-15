@@ -1,9 +1,10 @@
-#include "example_config.h"        // Include the configuration header file
-#include <Arduino.h>               // Include the core Arduino library
-#include <Adafruit_SSD1306.h>      // Include the Adafruit library for the SSD1306 OLED display
-#include "SmartCube/cubeSound.h"   // Include custom header for sound functions
-#include "SmartCube/cubeButtons.h" // Include custom header for button handling functions
+#include "example_config.h"            // Include the configuration header file
+#include <Arduino.h>                   // Include the core Arduino library
+#include <Adafruit_SSD1306.h>          // Include the Adafruit library for the SSD1306 OLED display
+#include "SmartCube/cubeSound.h"       // Include custom header for sound functions
+#include "SmartCube/cubeButtons.h"     // Include custom header for button handling functions
 #include "SmartCube/cubeWifiManager.h" // Include custom header for managing WiFi connections
+#include "SmartCube/cubeDemo.h"        // Remove this if not using demo functions
 
 // Initialize the OLED display with specified width, height, and reset pin
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
@@ -44,5 +45,6 @@ void setup() {
 }
 
 void loop() {
-  cubeButtonHandler(); // Continuously check and handle button actions
+  interactiveCubeDemo(); // Run the demo screen animation
+  cubeButtonHandler();   // Continuously check and handle button actions
 }
