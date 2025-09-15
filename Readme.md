@@ -17,23 +17,6 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 
 ---
 
-## Bill of Materials  
-
-| **Component**             | **Quantity** | **Description**                           | **Notes**                                   |  
-|---------------------------|--------------|-------------------------------------------|---------------------------------------------|  
-| ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |  
-| SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |  
-| 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type, most 14250 are not |  
-| TP4056 Module             | 1            | Charging and protection circuit           | Does not need to have a USB connector       |  
-| 6x6 Push Buttons          | 3 or 4       | Tactile push buttons                      |                                             |  
-| 20mm Piezo Buzzer         | 1            | Caseless buzzer for audio                 |                                             |  
-| Resistors (10kΩ)          | 3 or 4       | Pull-down resistors for buttons           | Not reqired if you are using ESP32          |  
-| Wires                     | Several      | Thin wires for connections                |                                             |  
-| Enclosure                 | 1            | 3D-printed case                           | 3D printable STL files are in `hardware/case/` |  
-| 2x6mm screw               | 12           | Small screws for seembling the case       | Does not have to be exactly 6mm long        |  
-
----
-
 ## Demo Code Explanation
 
 This repository contains a basic "Hello, World!" project for the SmartCube.
@@ -82,9 +65,27 @@ This is meant to provide a minimal starting point for further development with t
 
 ---
 
-## Assembly Instructions  
+## Bill of Materials  
+
+| **Component**             | **Quantity** | **Description**                           | **Notes**                                   |  
+|---------------------------|--------------|-------------------------------------------|---------------------------------------------|  
+| ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |  
+| SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |  
+| 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type, most 14250 are not |  
+| TP4056 Module             | 1            | Charging and protection circuit           | Does not need to have a USB connector       |  
+| 6x6 Push Buttons          | 3 or 4       | Tactile push buttons                      |                                             |  
+| 20mm Piezo Buzzer         | 1            | Caseless buzzer for audio                 |                                             |  
+| Resistors (10kΩ)          | 3 or 4       | Pull-down resistors for buttons           | Not reqired if you are using ESP32          |  
+| Wires                     | Several      | Thin wires for connections                |                                             |  
+| Enclosure                 | 1            | 3D-printed case                           | 3D printable STL files are in `hardware/case/` |  
+| 2x6mm screw               | 8            | Small screws for seembling the case       | Does not have to be exactly 6mm long        |  
+| 2x2mm screw               | 4            | Small screws for the front                | Mostly for cosmetic purposes                |  
 
 ![layout](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/layout.jpg)
+
+---
+
+## Assembly Instructions  
 
 1. Push the ESP8266 microcontroller in the ledge on the bottom [the cube body](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/case/SmartCube_Body_3_button.stl) it sould 'click in' with the USB-C port facing the hole. 
 Body with 3 or 4 button slots is available in the `hardware/case/`
