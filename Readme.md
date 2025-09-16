@@ -29,6 +29,7 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 3. [Schematics](#schematics)
 4. [Demo Code Explanation](#demo-code-explanation)
    * [Getting Started](#getting-started)
+   * [Uploading with PlatformIO](#uploading-with-platformio)
    * [Project Structure](#project-structure)
    * [What the Code Does](#what-the-code-does)
    * [Key Features](#key-features)
@@ -165,6 +166,16 @@ This repository contains a basic "Hello, World!" project for the SmartCube.
 2. Install the **[PlatformIO IDE extension](https://platformio.org/platformio-ide)**.
 3. Clone this repository and open the project folder in VSCode/VSCodium.
 4. PlatformIO will automatically handle environment setup and dependencies when you open the project.
+
+### Uploading with PlatformIO
+
+Once you open this git repository in VSCode and install the PlatformIO extension.
+You can click on the PlatformIO icon on the left sidebar
+![platformio1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/platformio1.jpg)
+
+In the PlatformIO panel, expand d1_mini_lite → General to reveal the available tasks.
+Click Build to compile the firmware, and then click Upload to flash it to your SmartCube.
+![platformio2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/platformio2.jpg)
 
 ### Project Structure:
 
