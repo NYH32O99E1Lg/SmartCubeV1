@@ -171,11 +171,11 @@ This repository contains a basic "Hello, World!" project for the SmartCube.
 
 Once you open this git repository in VSCode and install the PlatformIO extension.
 You can click on the PlatformIO icon on the left sidebar
-![platformio1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/platformio1.jpg)
+![platformio1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/platformio1.png)
 
 In the PlatformIO panel, expand d1_mini_lite → General to reveal the available tasks.
 Click Build to compile the firmware, and then click Upload to flash it to your SmartCube.
-![platformio2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/platformio2.jpg)
+![platformio2](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/platformio2.png)
 
 ### Project Structure:
 
