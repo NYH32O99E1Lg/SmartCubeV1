@@ -45,19 +45,21 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 ## Bill of Materials  
 
 | **Component**             | **Quantity** | **Description**                           | **Notes**                                   |  
-|---------------------------|--------------|-------------------------------------------|---------------------------------------------|  
-| ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |  
-| SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |  
-| 14250 Rechargeable Battery| 1            | Lithium-ion battery                       | Make sure you get the rechargeable type, most 14250 are not |  
-| TP4056 Module             | 1            | Charging and protection circuit           | Does not need to have a USB connector       |  
-| 6x6 Push Buttons          | 3 or 4       | Tactile push buttons                      |                                             |  
-| 20mm Piezo Buzzer         | 1            | Caseless buzzer for audio                 |                                             |  
-| Resistors (10kΩ)          | 3 or 4       | Pull-down resistors for buttons           |                                             |
-| Resistors (220kΩ and 56kΩ)| 1            | Voltage divider                           | For monitoring the battery charge level     |  
+|---------------------------|--------------|-------------------------------------------|---------------------------------------------| 
+| Enclosure                 | 1            | 3D-printed case                           | 3D printable STL files are in `hardware/case/` |
+| ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |
+| SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |
+| 6x6 Push Buttons          | 3 or 4       | Tactile push buttons                      |                                             |
+| 20mm Piezo Buzzer         | 1            | Caseless buzzer for audio                 |                                             |
+| Resistors (10kΩ)          | 3 or 4       | Pull-down resistors for buttons           | Generally any resistor between 1kΩ and 100kΩ will work |
 | Wires                     | Several      | Thin wires for connections                | I used wires from inside an old ethernet cable |  
-| Enclosure                 | 1            | 3D-printed case                           | 3D printable STL files are in `hardware/case/` |  
 | 2x6mm screw               | 8            | Small screws for assembling the case      | Does not have to be exactly 6mm long        |  
-| 2x2mm screw               | 4            | Small screws for the front                | Mostly for cosmetic purposes                |  
+| 2x2mm screw               | 4 (Optional) | Small screws for the front                | Mostly for cosmetic purposes                |  
+| 14250 Rechargeable Battery| 1 (Optional) | Lithium-ion battery                       | Make sure it's rechargeable; most 14250 aren't |  
+| TP4056 Module             | 1 (Optional) | Charging and protection circuit           | USB connector not required                  |
+| Resistors (220kΩ and 56kΩ)| 1 (Optional) | Voltage divider                           | For monitoring the battery charge level     |
+| Micro Slider Switch (SS-12D00) | 1 (Optional) | On/Off switch                        | Only needed if installing the battery       |  
+
 
 ![layout](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/layout.jpg)
 ---
@@ -150,7 +152,7 @@ The battery is optional. Your SmartCube will work fine when powered via USB; how
 A single 700 mAh 14250 battery lasts about 24 hours.
 The TP4056 prevents the cell from being completely drained and should protect it from damage.
 
-Altough it's not included in any of the the pictures or schematics, both the case and the back cover are updated to include a slot for a micro slider switch (SPDT), in case you actually want to have a power switch instead of letting it run untill the battery drains.
+Although it's not shown in any of the pictures or schematics, both the case and the back cover are updated to include a slot for 8.5mm SPDT slider switch(SS-12D00), in case you actually want to have a power switch instead of letting it run until the battery drains.
 
 * Solder the 14250 battery to the **TP4056 input pins**.
 * Wire the **TP4056 output** to the **3.3V pin** on the D1 Mini to power the device.
