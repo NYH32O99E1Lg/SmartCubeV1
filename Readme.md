@@ -50,8 +50,8 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 | ESP8266 D1 Mini           | 1            | Microcontroller module                    |                                             |
 | SSD1306 OLED Display      | 1            | 128x64 resolution, I2C interface          |                                             |
 | 6x6 Push Buttons          | 3 or 4       | Tactile push buttons                      |                                             |
-| 20mm Piezo Buzzer         | 1            | Caseless buzzer for audio                 |                                             |
 | Resistors (10kΩ)          | 3 or 4       | Pull-down resistors for buttons           | Generally any resistor between 1kΩ and 100kΩ will work |
+| 20mm Piezo Buzzer         | 1            | Caseless buzzer for audio                 |                                             |
 | Wires                     | Several      | Thin wires for connections                | I used wires from inside an old ethernet cable |  
 | 2x6mm screw               | 8            | Small screws for assembling the case      | Does not have to be exactly 6mm long        |  
 | 2x2mm screw               | 4 (Optional) | Small screws for the front                | Mostly for cosmetic purposes                |  
