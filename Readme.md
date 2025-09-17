@@ -261,7 +261,8 @@ This is meant to provide a minimal starting point for further development with t
 - It's not as hard to make as it looks.
 - Battery is the trickiest part to fit in, it's best to put in the case last.
 - Test if everything works before completely closing the case shut. 
-- Ensure all connections are secure and isolated. Hot glue is your friend and will add extra protection from short circuits and it keep wires in place.
+- Make sure all connections are secure and not short-circuited. 
+- Hot glue is your friend, it will add extra protection from short-circuits and keep wires in place.
 - Everything is pretty tightly packed in there and it can be quite a mess.
 
 ![Packed](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241213_171725.jpg)
