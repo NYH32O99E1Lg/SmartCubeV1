@@ -150,7 +150,7 @@ The battery is optional. Your SmartCube will work fine when powered via USB; how
 A single 700 mAh 14250 battery lasts about 24 hours.
 The TP4056 prevents the cell from being completely drained and should protect it from damage.
 
-Altough it's not included in the pictues or schematics, both the case and the back cover are updated to include a slot for a micro slider switch (SPDT), in case you actually want to have a power switch instead of letting it run untill the battery drains.
+Altough it's not included in any of the the pictures or schematics, both the case and the back cover are updated to include a slot for a micro slider switch (SPDT), in case you actually want to have a power switch instead of letting it run untill the battery drains.
 
 * Solder the 14250 battery to the **TP4056 input pins**.
 * Wire the **TP4056 output** to the **3.3V pin** on the D1 Mini to power the device.
@@ -171,9 +171,11 @@ Altough it's not included in the pictues or schematics, both the case and the ba
 ## Schematics
 
 This is the basic drawing of the circuit without the battery
+
 ![Basic](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/schematic1.png)
 
 This is the complete circuit including the battery and a voltage divider
+
 ![WithBattery](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/schematic3.png)
 
 ---
