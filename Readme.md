@@ -147,7 +147,10 @@ As defined in the [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src
 
 The battery is optional. Your SmartCube will work fine when powered via USB; however, adding one makes it portable (and much cuter).
 
-A single 700 mAh 14250 battery lasts about 24 hours. Keep in mind there's currently no way to manually power the Cube off, it will continue running until the battery is depleted. The TP4056 prevents the cell from being completely drained and should protect it from damage.
+A single 700 mAh 14250 battery lasts about 24 hours.
+The TP4056 prevents the cell from being completely drained and should protect it from damage.
+
+Altough it's not included in the pictues or schematics, both the case and the back cover are updated to include a slot for a micro slider switch (SPDT), in case you actually want to have a power switch instead of letting it run untill the battery drains.
 
 * Solder the 14250 battery to the **TP4056 input pins**.
 * Wire the **TP4056 output** to the **3.3V pin** on the D1 Mini to power the device.
