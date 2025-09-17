@@ -20,14 +20,16 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 ### Table of Contents
 
 1. [Bill of Materials](#bill-of-materials)
-2. [Assembly Instructions](#assembly-instructions)
+2. [3D-Printing the Case](#3d-printing-the-case)
+3. [Assembly Instructions](#assembly-instructions)
    * [Body](#body)
    * [Buttons](#buttons)
    * [OLED Display](#oled-display)
    * [Buzzer](#buzzer)
    * [Battery Setup](#battery-setup)
-3. [Schematics](#schematics)
-4. [Demo Code Explanation](#demo-code-explanation)
+4. [Schematics](#schematics)
+5. [GPIO Pin Reference Table](#gpio-pin-reference-table)
+6. [Demo Code Explanation](#demo-code-explanation)
    * [Getting Started](#getting-started)
    * [Uploading with PlatformIO](#uploading-with-platformio)
    * [Project Structure](#project-structure)
@@ -36,7 +38,7 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
      * [WiFi Management](#wifi-management)
      * [Button Handling](#button-handling)
        * [Default Button Actions](#default-button-actions)
-5. [Tips and tricks](#tips-and-tricks)
+7. [Tips and tricks](#tips-and-tricks)
 
 ---
 
@@ -58,8 +60,24 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 | 2x2mm screw               | 4            | Small screws for the front                | Mostly for cosmetic purposes                |  
 
 ![layout](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/layout.jpg)
-
 ---
+
+### 3D-Printing the Case
+
+The SmartCube case is fully 3D-printable. STL files are included this repository in the `/hardware/case/` directory:
+
+| **File**                                  | **Description**                             |
+| ----------------------------------------- | ------------------------------------------- |
+| `SmartCube_Body_3_button.stl`             | Main cube body with slots for 3 buttons     |
+| `SmartCube_Body_4_button.stl`             | Optional body for 4 buttons                 |
+| `SmartCube_Front.stl`                     | Front panel for OLED display                |
+| `SmartCube_Front_No_Holes.stl`            | Optional front panel without holes          |
+| `SmartCube_Back_Speaker_Side_Hole.stl`    | Back panel                                  |
+| `SmartCube_Back_Speaker_Power_Switch.stl` | Back panel variant with power switch cutout |
+
+* Use PLA or PETG
+* 0.2 mm layer hight is more than enough, you can print finer if you want to.
+* Supports may be required depending on your printer
 
 ## Assembly Instructions  
 ---
@@ -156,6 +174,21 @@ This is the complete circuit including the battery and a voltage divider
 ![WithBattery](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/schematics/schematic3.png)
 
 ---
+
+### GPIO Pin Reference Table
+
+| **Component**           | **GPIO Pin** | **PlatformIO / Code Macro**       |
+| ----------------------- | ------------ | --------------------------------- |
+| Left Button             | D6 (GPIO12)  | `PIN_BTN_L`                       |
+| Middle Button           | D7 (GPIO13)  | `PIN_BTN_M`                       |
+| Right Button            | D8 (GPIO15)  | `PIN_BTN_R`                       |
+| Buzzer                  | D3 (GPIO0)   | `PIN_BUZZER`                      |
+| OLED SDA                | D2 (GPIO4)   | `SDA`                             |
+| OLED SCL                | D1 (GPIO5)   | `SCL`                             |
+| Battery Voltage Divider | A0           | `A0`                              |
+
+---
+
 ## Demo Code Explanation
 
 This repository contains a basic "Hello, World!" project for the SmartCube.
