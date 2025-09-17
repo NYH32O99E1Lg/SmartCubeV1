@@ -71,11 +71,11 @@ The SmartCube case is fully 3D-printable. STL files are included this repository
 | **File**                                  | **Description**                             |
 | ----------------------------------------- | ------------------------------------------- |
 | `SmartCube_Body_3_button.stl`             | Main cube body with slots for 3 buttons     |
-| `SmartCube_Body_4_button.stl`             | Optional body for 4 buttons                 |
+| `SmartCube_Body_4_button.stl`             | Body variant for 4 buttons                  |
 | `SmartCube_Front.stl`                     | Front panel for OLED display                |
-| `SmartCube_Front_No_Holes.stl`            | Optional front panel without holes          |
+| `SmartCube_Front_No_Holes.stl`            | Front panel variant without decorative screw holes |
 | `SmartCube_Back_Speaker_Side_Hole.stl`    | Back panel                                  |
-| `SmartCube_Back_Speaker_Power_Switch.stl` | Back panel variant with power switch cutout |
+| `SmartCube_Back_Speaker_Power_Switch.stl` | Back panel variant with power switch slot   |
 
 * Use PLA or PETG
 * 0.2 mm layer hight is more than enough, you can print finer if you want to.
@@ -258,14 +258,14 @@ This is meant to provide a minimal starting point for further development with t
 ---
 ## Tips and tricks  
 
-- This is still a work in progress
-- Everything is pretty tightly packed in there and it's a mess. But it's not as hard to make as it looks.
+- It's not as hard to make as it looks.
+- Battery is the trickiest part to fit in, it's best to put in the case last.
+- Test if everything works before completely closing the case shut. 
+- Ensure all connections are secure and isolated. Hot glue is your friend and will add extra protection from short circuits and it keep wires in place.
+- Everything is pretty tightly packed in there and it can be quite a mess.
 
 ![Packed](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/IMG_20241213_171725.jpg)
 
-- Ensure all connections are secure and isolated. Hot glue is your friend.
-- Test the circuit thoroughly before placing and gluing it in the enclosure.  
-- Battery is the trickiest part to fit in, it's best to glue the charging module directly to it and put it in the case last
 
 For questions or additional details, feel free to reach out! I would love to hear some feedback.
 Good luck and have fun :)
