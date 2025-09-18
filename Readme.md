@@ -2,7 +2,7 @@
 
 is a compact, customizable desk companion powered by an ESP8266 microcontroller.
 Built entirely from cheap, easy-to-find parts, it can be programmed for a variety of tasks:
-show notifications, display the weather, monitor sensors, act as a clock, host a simple web page, run small background tasks, or even be a virtual pet 
+show notifications, display the weather, monitor sensors, act as a clock, host a simple web page, serve as a WiFi extender, run small background tasks, or even be a virtual pet 
 
 Whatever you feel like experimenting with!
 
