@@ -7,5 +7,5 @@
 // Buttons and buzzer
 #define PIN_BTN_L 12 // D6
 #define PIN_BTN_M 13 // D7
-#define PIN_BTN_R 15 // D8
+#define PIN_BTN_R 14 // D8
 #define PIN_BUZZER 0 // D3
