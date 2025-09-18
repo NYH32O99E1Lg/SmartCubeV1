@@ -44,7 +44,7 @@ void interactiveCubeDemo() {
             display.setCursor(40, 18); 
             display.println("version");
             display.setCursor(52, 28);
-            display.println("1.1");
+            display.println("1.2");
             display.drawLine(0, 40, SCREEN_WIDTH, 40, WHITE);
             display.setCursor(0, 44);
             display.println("by besna_shnita");
