@@ -1,13 +1,7 @@
 #define ADC_PIN A0  // ESP8266 ADC pin
 
-// Tuneable min and max battery voltages
-float VOLTAGE_MAX = 4.2;  // Full battery voltage
-float VOLTAGE_MIN = 3.0;  // Empty battery voltage
-
-const float R1 = 220000.0;  // 220k ohms
-const float R2 = 56000.0;   // 56k ohms
 const float ADC_MAX = 1023.0; // 10-bit ADC resolution
-const float V_REF = 1.0;      // ESP8266 ADC reference voltage
+const float V_REF = 3.3;      // ESP8266 ADC reference voltage
 
 float readBatteryVoltage() {
   int rawADC = analogRead(ADC_PIN);

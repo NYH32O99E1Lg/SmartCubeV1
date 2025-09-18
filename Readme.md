@@ -57,7 +57,7 @@ show notifications, display the weather, monitor stuff, show a clock, serve a we
 | 2x2mm screw               | 4 (Optional) | Small screws for the front                | Mostly for cosmetic purposes                |  
 | 14250 Rechargeable Battery| 1 (Optional) | Lithium-ion battery                       | Make sure it's rechargeable; most 14250 aren't |  
 | TP4056 Module             | 1 (Optional) | Charging and protection circuit           | USB connector not required                  |
-| Resistors (220kΩ and 56kΩ)| 1 (Optional) | Voltage divider                           | For monitoring the battery charge level     |
+| Resistors (220kΩ and 56kΩ)| 1 (Optional) | Voltage divider for measuring battery level  | You can also use 100kΩ and 47kΩ           |
 | Micro Slider Switch (SS-12D00) | 1 (Optional) | On/Off switch                        | Only needed if installing the battery       |  
 
 
@@ -162,6 +162,8 @@ Although it's not shown in any of the pictures or schematics, both the case and 
   * **R2 = 56kΩ** (between A0 and GND)
 
     This scales the battery voltage safely down for measurement (~0-0.85V).
+
+As mentioned in the [Bill of Materials](#bill-of-materials) you can also use 100kΩ and 47kΩ resistors, just be sure to edit [example config](https://git.kopic.hr/tomislav/SmartCubeV1/src/branch/main/src/example_config.h)
 
 ![batt1](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/batt1.jpg)
 

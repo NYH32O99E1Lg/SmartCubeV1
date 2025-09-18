@@ -1,7 +1,7 @@
 void interactiveCubeDemo() {
     const int cx = SCREEN_WIDTH / 2;
-    const int cy = SCREEN_HEIGHT / 2;
-    const int size = 15;  // small cube
+    const int cy = SCREEN_HEIGHT / 2 - 10;
+    const int size = 14;  // small cube
     float angle = 0;
     float speed = 0.05;
     bool rotating = true;
@@ -52,6 +52,19 @@ void interactiveCubeDemo() {
             display.println("tomislav@kopic.hr");
         } else {
             if (rotating) angle += speed;
+
+            float voltage = readBatteryVoltage();
+            int percent = batteryPercentage(voltage);
+            display.setCursor(0, 55);
+            display.print("Battery:");
+            display.setCursor(66, 55);
+            display.print(voltage, 2);
+            display.print("V");
+            display.setCursor(98, 55);
+            display.print("(");
+            display.print(percent);
+            display.print("%");
+            display.print(")");
 
             float cosA = cos(angle);
             float sinA = sin(angle);
