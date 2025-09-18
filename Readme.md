@@ -1,8 +1,10 @@
 # SmartCube
 
-**SmartCube** is a tiny and customizable desk toy using the ESP8266 D1 Mini.
-Built entirely from cheap, easy-to-find parts, it can connect to Wi-Fi and can be programmed to do just about anything:
-show notifications, display the weather, monitor stuff, show a clock, serve a web site, mine crypto, be a virtual pet or whatever else your caffeine-fueled brain can imagine.
+is a compact, customizable desk companion powered by an ESP8266 microcontroller.
+Built entirely from cheap, easy-to-find parts, it can be programmed for a variety of tasks:
+show notifications, display the weather, monitor sensors, act as a clock, host a simple web page, run small background tasks, or even be a virtual pet 
+
+Whatever you feel like experimenting with!
 
 ![SmartCube](https://git.kopic.hr/tomislav/SmartCubeV1/raw/branch/main/hardware/pictures/cubez.jpg)
 
